@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  
+  resources :articles
+  resources :models
+  resources :dealers
+  resources :welcome
+
+  get 'Finalni projekat', to: 'welcome#index'
+
+  root 'welcome#index'
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
