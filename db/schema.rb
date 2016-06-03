@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20160602092407) do
 
   create_table "users", force: :cascade do |t|
-  	t.string   "first name",             limit: 255,              null: false
-  	t.string   "last name",              limit: 255,              null: false   
+  	t.string   "first_name",             limit: 255,              null: false
+  	t.string   "last_name",              limit: 255,              null: false   
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
     t.string   "reset_password_token",   limit: 255
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20160602092407) do
     t.integer "dealer_id",       limit: 4,      null: false
      
      end
-     
+
      add_index "articles", ["dealer_id"], name:"dealer_id", using: :btree
 
 end
